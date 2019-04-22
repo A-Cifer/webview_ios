@@ -6,13 +6,13 @@
 //  Copyright © 2017年 纠结伦. All rights reserved.
 //
 
-#import "ZHURLSessionDataTask.h"
+#import "URLSessionDataTask.h"
 
-@interface ZHURLSessionDataTask ()<ZHURLSessionDataTaskExports>
+@interface URLSessionDataTask ()<URLSessionDataTaskExports>
 
 @end
 
-@implementation ZHURLSessionDataTask
+@implementation URLSessionDataTask
 
 NSURLSessionTask * _task;
 
@@ -23,7 +23,7 @@ NSURLSessionTask * _task;
 }
 
 + (id)getZhDataTask:(double)str {
-    ZHURLSessionDataTask *g = [[ZHURLSessionDataTask alloc]init];
+    URLSessionDataTask *g = [[URLSessionDataTask alloc] init];
     return g;
 }
 

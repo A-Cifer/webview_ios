@@ -21,8 +21,6 @@ pod 'Reachability'
 
 pod 'FMDB', '~> 2.7.5'
 
-#pod 'YTKKeyValueStore', '~> 0.1.2'
-
 pod 'AFNetwork', '~> 0.1.0'
 
 end

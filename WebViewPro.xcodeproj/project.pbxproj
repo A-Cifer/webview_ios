@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		04402D1B2269DC8200E1BC61 /* ZHJSVMManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 04402D162269DC8200E1BC61 /* ZHJSVMManager.m */; };
+		04402D1B2269DC8200E1BC61 /* JSVMManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 04402D162269DC8200E1BC61 /* JSVMManager.m */; };
 		04402D1C2269DC8200E1BC61 /* jsvmTest.js in Resources */ = {isa = PBXBuildFile; fileRef = 04402D172269DC8200E1BC61 /* jsvmTest.js */; };
 		04402D1D2269DC8200E1BC61 /* AFNetWorking_Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 04402D182269DC8200E1BC61 /* AFNetWorking_Extension.m */; };
-		04402D1E2269DC8200E1BC61 /* ZHURLSessionDataTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 04402D1A2269DC8200E1BC61 /* ZHURLSessionDataTask.m */; };
+		04402D1E2269DC8200E1BC61 /* URLSessionDataTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 04402D1A2269DC8200E1BC61 /* URLSessionDataTask.m */; };
 		1828D344215E358500AEC12F /* DeviceIdProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 1828D343215E358500AEC12F /* DeviceIdProvider.m */; };
 		186CC14E212D3D38004AC557 /* BaseObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 186CC14D212D3D38004AC557 /* BaseObject.m */; };
 		186CC150212D3D5C004AC557 /* QRCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 186CC14F212D3D5C004AC557 /* QRCode.m */; };
@@ -74,12 +74,12 @@
 
 /* Begin PBXFileReference section */
 		04402D142269DC8200E1BC61 /* AFNetWorking_Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetWorking_Extension.h; sourceTree = "<group>"; };
-		04402D152269DC8200E1BC61 /* ZHURLSessionDataTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHURLSessionDataTask.h; sourceTree = "<group>"; };
-		04402D162269DC8200E1BC61 /* ZHJSVMManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHJSVMManager.m; sourceTree = "<group>"; };
+		04402D152269DC8200E1BC61 /* URLSessionDataTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URLSessionDataTask.h; sourceTree = "<group>"; };
+		04402D162269DC8200E1BC61 /* JSVMManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSVMManager.m; sourceTree = "<group>"; };
 		04402D172269DC8200E1BC61 /* jsvmTest.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = jsvmTest.js; sourceTree = "<group>"; };
 		04402D182269DC8200E1BC61 /* AFNetWorking_Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetWorking_Extension.m; sourceTree = "<group>"; };
-		04402D192269DC8200E1BC61 /* ZHJSVMManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHJSVMManager.h; sourceTree = "<group>"; };
-		04402D1A2269DC8200E1BC61 /* ZHURLSessionDataTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHURLSessionDataTask.m; sourceTree = "<group>"; };
+		04402D192269DC8200E1BC61 /* JSVMManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSVMManager.h; sourceTree = "<group>"; };
+		04402D1A2269DC8200E1BC61 /* URLSessionDataTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URLSessionDataTask.m; sourceTree = "<group>"; };
 		05E9AC1474756A21F18A3754 /* Pods_WebViewPro.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WebViewPro.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1172D96F2A9AD88014270C48 /* Pods-WebViewPro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebViewPro.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WebViewPro/Pods-WebViewPro.debug.xcconfig"; sourceTree = "<group>"; };
 		1828D342215E358500AEC12F /* DeviceIdProvider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeviceIdProvider.h; sourceTree = "<group>"; };
@@ -221,10 +221,10 @@
 				04402D172269DC8200E1BC61 /* jsvmTest.js */,
 				04402D142269DC8200E1BC61 /* AFNetWorking_Extension.h */,
 				04402D182269DC8200E1BC61 /* AFNetWorking_Extension.m */,
-				04402D152269DC8200E1BC61 /* ZHURLSessionDataTask.h */,
-				04402D1A2269DC8200E1BC61 /* ZHURLSessionDataTask.m */,
-				04402D192269DC8200E1BC61 /* ZHJSVMManager.h */,
-				04402D162269DC8200E1BC61 /* ZHJSVMManager.m */,
+				04402D152269DC8200E1BC61 /* URLSessionDataTask.h */,
+				04402D1A2269DC8200E1BC61 /* URLSessionDataTask.m */,
+				04402D192269DC8200E1BC61 /* JSVMManager.h */,
+				04402D162269DC8200E1BC61 /* JSVMManager.m */,
 			);
 			path = jsvm;
 			sourceTree = "<group>";
@@ -691,11 +691,11 @@
 				F33D934F21B109FC001E3AC8 /* globolNavigationController.m in Sources */,
 				F340DD4321DDB8B800A25D50 /* AudioRecorder.m in Sources */,
 				F33D934521AFD1C0001E3AC8 /* YNWebView.m in Sources */,
-				04402D1E2269DC8200E1BC61 /* ZHURLSessionDataTask.m in Sources */,
+				04402D1E2269DC8200E1BC61 /* URLSessionDataTask.m in Sources */,
 				F33D935221B10E44001E3AC8 /* ynWebViewController.m in Sources */,
 				F362493A22150D5600A28ADE /* MessagePost.m in Sources */,
 				F31241AD21AE6E1700819868 /* blake2b.c in Sources */,
-				04402D1B2269DC8200E1BC61 /* ZHJSVMManager.m in Sources */,
+				04402D1B2269DC8200E1BC61 /* JSVMManager.m in Sources */,
 				1828D344215E358500AEC12F /* DeviceIdProvider.m in Sources */,
 				F33D934B21AFF3A3001E3AC8 /* WebViewManager.m in Sources */,
 				F3750F232232663B0047B802 /* LocalLanguageMgr.m in Sources */,

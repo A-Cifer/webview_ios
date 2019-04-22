@@ -9,15 +9,15 @@
 #import <Foundation/Foundation.h>
 #import <JavaScriptCore/JavaScriptCore.h>
 
-@class ZHURLSessionDataTask;
-@protocol ZHURLSessionDataTaskExports <JSExport, NSObject>
+@class URLSessionDataTask;
+@protocol URLSessionDataTaskExports <JSExport, NSObject>
 
-+ (ZHURLSessionDataTask *) getZhDataTask:(double)str;
++ (URLSessionDataTask *) getZhDataTask:(double)str;
 
 - (void)cancel;
 
 @end
 
-@interface ZHURLSessionDataTask : NSObject
+@interface URLSessionDataTask : NSObject
 - (instancetype)initWithTask:(NSURLSessionTask *)task;
 @end

@@ -9,7 +9,7 @@
 #import "WebViewAppDelegate.h"
 #import "globolNavigationController.h"
 #import "BaseObject.h"
-#import "ZHJSVMManager.h"
+#import "JSVMManager.h"
 
 #define IOS10_OR_LATER ([[[UIDevice currentDevice] systemVersion] floatValue] >= 10.0)
 #define IOS9_OR_LATER ([[[UIDevice currentDevice] systemVersion] floatValue] >= 9.0)
@@ -24,29 +24,6 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    [[ZHJSVMManager getIntance]initContext];
-//    self.context = [[JSContext alloc] init];
-//    [self.context evaluateScript:@"var console = {}"];
-//    self.context[@"console"][@"log"] = ^(NSString *message) {
-//        NSLog(@"Javascript log: %@",message);
-//    };
-//    self.context[@"setTimeout"] = ^(JSValue *func, JSValue *timeout) {
-//        if (timeout.isNumber) {
-//            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)([timeout toInt32] * NSEC_PER_MSEC)), dispatch_get_main_queue(), ^{
-//                [func callWithArguments:@[]];
-//            });
-//        }
-//    };
-//    NSLog(@"123");
-//    [_context evaluateScript:@"console.log('test abc');"];
-//    [_context evaluateScript:@"var timeTest = function(){console.log('timeOut test 1234'); setTimeout(timeTest,1000)}"];
-//    [_context evaluateScript:@"console.log('timeout start');setTimeout(timeTest,1000);"];
-//    [_context evaluateScript:@"var num = 5 + 5"];      //做计算
-//    [_context evaluateScript:@"var names = [\'Grace\', \'Ada\', \'Margaret\']"]; //创建变量
-//    [_context evaluateScript:@"var triple = function(value) { return value * 3 }"];  //定义方法
-//    JSValue *tripleNum = [_context evaluateScript:@"triple(num)"];
-//    NSLog(@"trileNum %@", [tripleNum toNumber]);
-    
     
     // 设置userAgent
     NSString *customizeUserAgent = @" YINENG_IOS_GAME/1.0";
@@ -55,21 +32,21 @@
     if (customizeUserAgent) {
         [[NSUserDefaults standardUserDefaults] registerDefaults:@{@"UserAgent": customizeUserAgent}];
     }
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-
-//    WebViewController *viewController = [WebViewController sharedInstence];
-//    globolNavigationController *navi = [[globolNavigationController alloc] initWithRootViewController:viewController];
-//    self.window.rootViewController = navi;
-//    [BaseObject setVc:navi];
-//    [self.window makeKeyAndVisible];
-//    [self initShareSDK];
-//
-//    [self initAliPush];
-//    [self registerAPNS:application];
-//
-//    [CloudPushSDK sendNotificationAck:launchOptions];
-//    NSLog(@"%@",[CloudPushSDK getDeviceId]);
+    NSString *userAgent = [customizeUserAgent stringByAppendingString:@" JSVM_IOS"];
     
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    WebViewController *viewController = [WebViewController sharedInstence];
+    globolNavigationController *navi = [[globolNavigationController alloc] initWithRootViewController:viewController];
+    self.window.rootViewController = navi;
+    [BaseObject setVc:navi];
+    [self.window makeKeyAndVisible];
+    
+    self.context = [[JSVMManager getIntance] shareInstanceWithUserAgent:userAgent withNavigationController:navi];
+    
+    [self initShareSDK];
+    [self initAliPush];
+    [self registerAPNS:application];
+    [CloudPushSDK sendNotificationAck:launchOptions];
     
     return YES;
 }
